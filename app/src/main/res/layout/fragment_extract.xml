@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/default_dimen"
+    tools:context=".ui.CompressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_file_audio"
+            style="@style/Widget.Custom.Title.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:layout_marginTop="@dimen/default_dimen"
+            android:text="@string/file"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_audio_path"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_select_audio"
+            app:layout_constraintStart_toEndOf="@+id/tv_file_audio"
+            app:layout_constraintTop_toTopOf="@+id/tv_file_audio"
+            tools:text="File Path" />
+
+        <Button
+            android:id="@+id/btn_select_audio"
+            style="@style/Widget.Custom.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_dimen"
+            android:text="@string/select_file"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_file_audio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_file_audio" />
+
+        <TextView
+            android:id="@+id/tv_file_key"
+            style="@style/Widget.Custom.Title.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:layout_marginTop="40dp"
+            android:text="@string/key"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_select_audio" />
+
+
+        <Button
+            android:id="@+id/btn_select_key"
+            style="@style/Widget.Custom.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_dimen"
+            android:text="@string/select_key"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_file_key"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_file_key" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_a_key"
+            style="@style/Widget.Custom.TextInputLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:layout_marginTop="8dp"
+            android:hint="@string/mwc_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_select_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_txt_a_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_b_key"
+            style="@style/Widget.Custom.TextInputLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:hint="@string/mwc_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_a_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_txt_b_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_c0_key"
+            style="@style/Widget.Custom.TextInputLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:hint="@string/mwc_c0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_b_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_txt_c0_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_x0_key"
+            style="@style/Widget.Custom.TextInputLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:hint="@string/mwc_x0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_c0_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_txt_x0_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_extract"
+            style="@style/Widget.Custom.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="@dimen/default_dimen"
+            android:text="@string/extract_message"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_x0_key" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/Widget.Custom.Title.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:layout_marginTop="@dimen/default_dimen"
+            android:text="@string/message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_extract" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_message"
+            style="@style/Widget.Custom.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_dimen"
+            app:counterEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_message"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_txt_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:maxLines="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_process"
+            style="@style/Widget.Custom.Title.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/default_dimen"
+            android:layout_marginStart="@dimen/default_dimen"
+            android:text="@string/process_status"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_message" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_dimen"
+            android:layout_marginBottom="@dimen/default_dimen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_process"
+            tools:text="Status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

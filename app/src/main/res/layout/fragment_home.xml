@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_embed_menu"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="269dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="@dimen/default_dimen"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/embeding"
+        app:backgroundTint="#666B8F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_compress_menu"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="269dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="@dimen/default_dimen"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/compression"
+        app:backgroundTint="#666B8F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_decompress_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_decompress_menu"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="269dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="@dimen/default_dimen"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/decompression"
+        app:backgroundTint="#666B8F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_compress_menu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_extract_menu"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="269dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="@dimen/default_dimen"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/extraction"
+        app:backgroundTint="#666B8F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_embed_menu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_about_menu"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="281dp"
+        android:layout_height="60dp"
+        android:layout_margin="103dp"
+        android:layout_marginTop="132dp"
+        android:text="@string/comparefiles"
+        android:textColorLink="#1B1414"
+        app:backgroundTint="#CE928E9A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_decompress_menu"
+        app:rippleColor="#5D5C60" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/changeMyLangAlb"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="76dp"
+        android:layout_height="30dp"
+        android:text="@string/changeLang_alb"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/changeMyLangEng"
+        style="@style/Widget.Custom.Button.Menu"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:text="@string/changeLAng_Eng"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/btn_extract_menu"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
